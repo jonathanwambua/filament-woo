@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.fi-main {
+    background-color: rgba(var(--gray-100), var(--tw-bg-opacity))!important;
+}
