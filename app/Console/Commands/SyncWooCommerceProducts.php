@@ -25,11 +25,11 @@ class SyncWooCommerceProducts extends Command
         Product::truncate();
         foreach ($products as $product) {
             Product::create([
-                'id' => $product['id'],
-                'name' => $product['name'],
-                'status' => $product['status'],
-                'regular_price' => $product['regular_price'],
-                'image' => $product['images'][0]['src'],
+                'id' => $product->id,
+                'name' => $product->name,
+                'status' => $product->stock_status,
+                'regular_price' => $product->regular_price,
+                'image' => $product->images[0]->src,
             ]);
         }
     }

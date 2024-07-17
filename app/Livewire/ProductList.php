@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Product;
 use App\Services\WooCommerceService;
 use Livewire\Component;
 
@@ -11,7 +12,7 @@ class ProductList extends Component
 
     public function mount(WooCommerceService $wooCommerceService)
     {
-        $this->products = $wooCommerceService->getProducts();
+        $this->products = Product::all()->toArray();
     }
 
     public function render()
